@@ -1,0 +1,25 @@
+// pyrightconfig.json
+{
+    "include": [
+        "backend"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__",
+        "**/venv"
+    ],
+    "ignore": [
+        "backend/tests"
+    ],
+    "defineConstant": {
+        "DEBUG": true
+    },
+    "venvPath": "./backend",
+    "venv": "venv",
+    "pythonVersion": "3.9",
+    "pythonPlatform": "Linux",
+    "typeCheckingMode": "basic",
+    "useLibraryCodeForTypes": true,
+    "reportMissingImports": true,
+    "reportMissingTypeStubs": false
+}

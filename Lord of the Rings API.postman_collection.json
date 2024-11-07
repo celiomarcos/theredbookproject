@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "eb9d4e2d-0f20-4512-bc63-30ca6d095fcf",
+		"name": "Lord of the Rings API",
+		"description": "# The one api to rule them all\n\nPostman docs for gitfosh's [LOTR api](https://the-one-api.herokuapp.com).\n\n#### Steps to using the LOTR API in Postman:\n\n 1. Click \"Run in Postman\" button\n 1. Setup a new account at [https://the-one-api.herokuapp.com](https://the-one-api.herokuapp.com)\n 1. Copy the access token\n 1. Edit the \"Lord of the Rings API\" collection, click on Variables, and paste your access token into the \"current\" value for ACCESS_TOKEN_PACEHOLDER\n\n\n#### Additional notes:\n\n - All kudos for the API go to gitfosh and crew. I just documented it for fun :)\n - Github: [https://github.com/gitfrosh/lotr-api](https://github.com/gitfrosh/lotr-api)\n - API Hosted on Heroku: [https://the-one-api.herokuapp.com/v1](https://the-one-api.herokuapp.com/v1)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4862709",
+		"_collection_link": "https://gaebichoderua.postman.co/workspace/pBrana-Workspace~9900611e-9839-418b-810e-c719e55afe67/collection/4862709-eb9d4e2d-0f20-4512-bc63-30ca6d095fcf?action=share&source=collection_link&creator=4862709"
+	},
+	"item": [
+		{
+			"name": "book",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/book",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"book"
+					]
+				},
+				"description": "List of all \"The Lord of the Rings\" books"
+			},
+			"response": []
+		},
+		{
+			"name": "book/{id}",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/book/{{bookId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}"
+					]
+				},
+				"description": "Request one specific book"
+			},
+			"response": []
+		},
+		{
+			"name": "book/{id}/chapter",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/book/{{bookId}}/chapter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"book",
+						"{{bookId}}",
+						"chapter"
+					]
+				},
+				"description": "Request all chapters of one specific book"
+			},
+			"response": []
+		},
+		{
+			"name": "chapter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/chapter",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"chapter"
+					]
+				},
+				"description": "List of all book chapters"
+			},
+			"response": []
+		},
+		{
+			"name": "chapter/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/chapter/{{chapterId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"chapter",
+						"{{chapterId}}"
+					]
+				},
+				"description": "Request one specific book chapter"
+			},
+			"response": []
+		},
+		{
+			"name": "character",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/character",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"character"
+					]
+				},
+				"description": "List of characters including metadata like name, gender, realm, race and more"
+			},
+			"response": []
+		},
+		{
+			"name": "character/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/character/{{characterId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"character",
+						"{{characterId}}"
+					]
+				},
+				"description": "Request one specific character"
+			},
+			"response": []
+		},
+		{
+			"name": "character/{id}/quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/character/{{characterId}}/quote",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"character",
+						"{{characterId}}",
+						"quote"
+					]
+				},
+				"description": "Request all movie quotes of one specific character"
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/movie",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movie"
+					]
+				},
+				"description": "List of all movies, including the \"The Lord of the Rings\" and the \"The Hobbit\" trilogies"
+			},
+			"response": []
+		},
+		{
+			"name": "movie/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/movie/{{movieId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movie",
+						"{{movieId}}"
+					]
+				},
+				"description": "Request one specific movie"
+			},
+			"response": []
+		},
+		{
+			"name": "movie/{id}/quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/movie/{{movieId}}/quote",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"movie",
+						"{{movieId}}",
+						"quote"
+					]
+				},
+				"description": "Request all movie quotes for one specific movie (only working for the LotR trilogy)"
+			},
+			"response": []
+		},
+		{
+			"name": "quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/quote",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"quote"
+					]
+				},
+				"description": "List of all movie quotes"
+			},
+			"response": []
+		},
+		{
+			"name": "quote/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/quote/{{quoteId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"quote",
+						"{{quoteId}}"
+					]
+				},
+				"description": "List of all movie quotes"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{accessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://the-one-api.herokuapp.com/v1"
+		},
+		{
+			"key": "bookId",
+			"value": "5cf5805fb53e011a64671582"
+		},
+		{
+			"key": "movieId",
+			"value": "5cd95395de30eff6ebccde5c"
+		},
+		{
+			"key": "characterId",
+			"value": "5cd99d4bde30eff6ebccfd0d"
+		},
+		{
+			"key": "quoteId",
+			"value": "5cd96e05de30eff6ebccf124"
+		},
+		{
+			"key": "accessToken",
+			"value": "ACCESS_TOKEN_PACEHOLDER"
+		},
+		{
+			"key": "chapterId",
+			"value": "5cdc25d4bc17e929cf2461ec"
+		}
+	]
+}

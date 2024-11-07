@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <!-- Primary Meta Tags -->
+    <title>The Red Book Project - LOTR Movies Explorer</title>
+    <meta name="title" content="The Red Book Project - LOTR Movies Explorer" />
+    <meta
+      name="description"
+      content="Explore the Lord of the Rings movies collection. Search, discover, and track your movie exploration journey."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="%PUBLIC_URL%" />
+    <meta property="og:title" content="The Red Book Project - LOTR Movies Explorer" />
+    <meta
+      property="og:description"
+      content="Explore the Lord of the Rings movies collection. Search, discover, and track your movie exploration journey."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="%PUBLIC_URL%" />
+    <meta property="twitter:title" content="The Red Book Project - LOTR Movies Explorer" />
+    <meta
+      property="twitter:description"
+      content="Explore the Lord of the Rings movies collection. Search, discover, and track your movie exploration journey."
+    />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Preconnect to API domain -->
+    <link rel="preconnect" href="http://localhost:5000" />
+
+    <!-- Font preload (if using custom fonts) -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Critical CSS -->
+    <style>
+      /* Minimal CSS for initial render */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+          'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+          'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #f3f4f6;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      /* Loading spinner styles */
+      .initial-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .initial-loader__spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid #f3f3f3;
+        border-top: 3px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Accessibility focus styles */
+      *:focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    </style>
+
+    <!-- Prevent flash of unstyled content -->
+    <script>
+      (function() {
+        document.documentElement.classList.add('loading');
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center;">
+        <h1>JavaScript Required</h1>
+        <p>
+          We're sorry but The Red Book Project doesn't work properly without
+          JavaScript enabled. Please enable it to continue.
+        </p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <!-- Initial loading state -->
+      <div class="initial-loader">
+        <div class="initial-loader__spinner"></div>
+      </div>
+    </div>
+
+    <!-- Remove loading class once React loads -->
+    <script>
+      window.addEventListener('load', function() {
+        requestAnimationFrame(function() {
+          document.documentElement.classList.remove('loading');
+        });
+      });
+    </script>
+  </body>
+</html>

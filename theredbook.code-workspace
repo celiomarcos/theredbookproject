@@ -1,0 +1,77 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "name": "Root"
+        },
+        {
+            "path": "./backend",
+            "name": "Backend"
+        },
+        {
+            "path": "./frontend",
+            "name": "Frontend"
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "./backend/venv/bin/python",
+        "python.analysis.extraPaths": [
+            "./backend",
+            "./backend/app"
+        ],
+        "python.analysis.typeCheckingMode": "basic",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "editor.rulers": [
+            80,
+            100
+        ],
+        "files.associations": {
+            "*.py": "python",
+            "requirements*.txt": "pip-requirements"
+        },
+        "search.exclude": {
+            "**/node_modules": true,
+            "**/venv": true,
+            "**/__pycache__": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode",
+            "ms-python.black-formatter",
+            "njpwerner.autodocstring"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Flask",
+                "type": "python",
+                "request": "launch",
+                "module": "flask",
+                "env": {
+                    "FLASK_APP": "backend/run.py",
+                    "FLASK_ENV": "development"
+                },
+                "args": [
+                    "run",
+                    "--no-debugger"
+                ],
+                "jinja": true
+            },
+            {
+                "name": "Python: Current File",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal"
+            }
+        ]
+    }
+}
